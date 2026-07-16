@@ -1,0 +1,4 @@
+session_token = "XYZ789"
+
+print(id(session_token))
+140235678912
