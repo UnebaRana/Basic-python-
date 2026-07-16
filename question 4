@@ -1,0 +1,7 @@
+system-status = "Active"
+user$salary = 45000
+system_status = "Active"
+user_salary = 45000
+
+print(system_status)
+print(user_salary)
