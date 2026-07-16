@@ -1,0 +1,4 @@
+print("Starting System...")
+print("Loading Database)
+print("System Ready!")
+SyntaxError: unterminated string literal
