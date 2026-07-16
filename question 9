@@ -1,0 +1,12 @@
+In Python, whitespace (spaces and tabs) is very important because it defines the structure and blocks of code. Unlike many other programming languages, Python uses indentation instead of curly braces {} to show which statements belong together.
+
+An "Unexpected Indentation" error occurs when there are extra spaces or tabs where Python does not expect them. This can happen if you copy code from the internet or mix spaces and tabs incorrectly.
+
+We cannot indent code however we want because Python follows strict indentation rules. Incorrect indentation changes the program's structure, making the code invalid or causing it to behave differently.
+
+Example:
+
+if True:
+    print("Correct Indentation")
+
+  print("Unexpected Indentation")  # Error
