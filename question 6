@@ -1,0 +1,18 @@
+print("Active connections: " + 15)
+TypeError: can only concatenate str (not "int") to str
+print("Active connections: " + str(15))
+Output:
+
+Active connections: 15
+2. Comma , ka Use
+
+print() function comma ke sath different data types ko automatically handle kar leta hai.
+
+print("Active connections:", 15)
+
+Output:
+
+Active connections: 15
+Easy Explanation:
++ operator sirf same type (string + string) ko jor sakta hai.
+Integer ko pehle str() se string banayein, ya print() mein comma , use karein.
