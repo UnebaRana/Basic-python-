@@ -1,0 +1,17 @@
+# Pizza Area Calculator
+
+diameter = float(input("Enter pizza diameter: "))
+
+radius = diameter / 2
+area = 3.14 * (radius ** 2)
+
+print("Pizza Area =", area)
+input() hamesha string return karta hai.
+float() se input ko number mein convert (typecasting) kiya gaya hai.
+Radius = Diameter ÷ 2
+
+Formula:
+
+Area = 3.14 × (radius ** 2)
+** ka matlab power (square) hota hai.
+rogram user se pizza ka diameter leta hai, float() se typecasting karta hai, phir formula Area = 3.14 × (diameter / 2)² use karke pizza ka total area calculate aur print karta hai.
