@@ -1,0 +1,32 @@
+Python for = "Admin" par error deta hai kyun ke for Python ka reserved keyword (keyword) hai.
+
+Reserved words ya keywords Python ke apne commands hote hain jo programming language mein special meaning rakhte hain. In keywords ko variable names ke taur par use nahi kiya ja sakta.
+
+
+for = "Admin"
+
+Is se SyntaxError aayega.
+
+
+
+user_role = "Admin"
+print(user_role)
+
+Ya:
+
+role = "Admin"
+print(role)
+Easy Explanation:
+for → Python keyword hai, is liye variable name nahi ban sakta.
+Variable ka naam role, user_role, ya admin_role rakh sakte hain.
+
+Examples of Python keywords:
+
+for
+if
+else
+while
+def
+class
+return
+import
