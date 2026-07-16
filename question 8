@@ -1,0 +1,30 @@
+x - 8
+
+✅ Expression
+
+Expression ek value produce (calculate) karta hai.
+Is mein:
+Operands: x aur 8
+Operator: - (minus)
+Snippet B:
+x = 10
+
+✅ Statement (Assignment Statement)
+
+Statement ek action perform karta hai.
+Is mein 10 ki value variable x ko assign ki ja rahi hai.
+Is mein:
+Operator: = (assignment operator)
+Operands: x aur 10
+Operators aur Operands ka Farq:
+Operator: Woh symbol jo operation perform karta hai.
+Examples: +, -, *, /, =
+Operand: Woh values ya variables jin par operation hota hai.
+Examples: x, 8, 10
+Easy Explanation:
+Snippet	Type	Explanation
+x - 8	Expression	Value calculate karta hai.
+x = 10	Statement	10 ko x mein assign karta hai.
+Final Answer:
+Snippet A (x - 8) → Expression
+Snippet B (x = 10) → Statement (Assignment Statement)
