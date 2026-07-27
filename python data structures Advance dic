@@ -1,0 +1,145 @@
+Category A: Dictionaries (Key-Value Pairs) Scenarios
+QUESTION 1:
+products = {
+    "Laptop": 120000,
+    "Mobile": 45000,
+    "Headphones": 8000
+}
+
+print("Laptop Price:", products["Laptop"])
+QUESTION 2:
+student_contact = {
+    "Ali": "0300-1234567"
+}
+
+student_contact["Ali"] = "0300-9999999"
+
+print(student_contact)
+QUESTION 3:
+inventory = {}
+
+inventory["Apples"] = 50
+inventory["Oranges"] = 30
+
+print(inventory)
+QUESTION 4:
+employee = {
+    "name": "Sarah",
+    "role": "Designer",
+    "salary": 95000
+}
+
+employee.pop("salary")
+
+print(employee)
+QUESTION 5:
+config = {
+    "host": "localhost",
+    "port": 8080
+}
+
+print(config.get("port"))
+print(config.get("username"))
+QUESTION 6:
+user_profile = {
+    "username": "zain_dev",
+    "email": "zain@mail.com",
+    "status": "Active"
+}
+
+print("Keys:", user_profile.keys())
+print("Values:", user_profile.values())
+QUESTION 7:
+basic_info = {
+    "name": "Hamza"
+}
+
+professional_info = {
+    "role": "AI Specialist"
+}
+
+basic_info.update(professional_info)
+
+print(basic_info)
+QUESTION 8:
+student_data = {
+    "name": "Asad",
+    "age": 22,
+    "name": "Bilal"
+}
+
+print(student_data["name"])
+Urania Category B: Sets (Unique Collections) Scenarios
+QUESTION 9:
+traffic = ["IP-1", "IP-2", "IP-1", "IP-3", "IP-2"]
+
+unique_ips = set(traffic)
+
+print(unique_ips)
+QUESTION 10 :
+tags = {
+    "python",
+    "programming"
+}
+
+tags.add("machine_learning")
+
+print(tags)
+QUESTION 11:
+blocked_ips = {
+    "192.168.1.1",
+    "10.0.0.1"
+}
+
+blocked_ips.remove("10.0.0.1")
+
+print(blocked_ips)
+QUESTION 12:
+my_set = set()
+
+print(type(my_set))
+QUESTION 13:
+dev1 = {
+    "Python",
+    "SQL",
+    "HTML"
+}
+
+dev2 = {
+    "Java",
+    "Python",
+    "CSS"
+}
+
+common = dev1.intersection(dev2)
+
+print(common)
+QUESTION 14:
+leads_a = {
+    "ali@mail.com",
+    "sara@mail.com"
+}
+
+leads_b = {
+    "zain@mail.com",
+    "sara@mail.com"
+}
+
+all_leads = leads_a.union(leads_b)
+
+print(all_leads)
+QUESTION 15:
+languages = [
+    "Python",
+    "Java",
+    "Python",
+    "C++",
+    "Java"
+]
+
+unique_languages = set(languages)
+
+print("Unique Languages:", unique_languages)
+print("Total Unique Languages:", len(unique_languages))
+QUESTION 16;
+
