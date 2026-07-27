@@ -1,0 +1,173 @@
+Section A: Basic & Intermediate Functions Scenarios
+QUESTION 1:
+def send_welcome_message():
+    print("Welcome to Python World!")
+
+send_welcome_message()
+send_welcome_message()
+send_welcome_message()
+OUTPUT:
+Welcome to Python World!
+Welcome to Python World!
+Welcome to Python World!
+QUESTION 2:
+print_invoice()
+
+def print_invoice():
+    print("Invoice Generated")
+    INPUT:
+    Traceback (most recent call last):
+NameError: name 'print_invoice' is not defined
+QUESTION 3:
+def apply_discount(bill_amount, discount_percentage):
+    final_bill = bill_amount - (bill_amount * discount_percentage / 100)
+    print("Final Payable:", final_bill)
+    OUTPUT:
+    Final Payable: 4500.0
+    QUESTION 4:
+    def calculate_fare(base_fare, distance):
+    fare = base_fare + (distance * 20)
+    print(fare)
+
+calculate_fare(150)
+OUTPUT:
+TypeError:
+calculate_fare() missing 1 required positional argument: 'distance'
+QUESTION 5:
+def set_ac_temp(temp=24):
+    print("AC set to", temp)
+
+set_ac_temp()
+set_ac_temp(18)
+OUTPUT:
+AC set to 24
+AC set to 18
+QUESTION 6:
+def convert_usd_to_pkr(amount):
+    return amount * 280
+
+result = convert_usd_to_pkr(50)
+print(result)
+OUTPUT:
+14000
+QUESTION 7:
+def book_flight(origin, destination, passenger_class):
+    print(f"Booking Flight from {origin} to {destination} in {passenger_class} class.")
+
+book_flight(
+    destination="London",
+    passenger_class="Business",
+    origin="Karachi"
+)
+OUTPUT:
+Booking Flight from Karachi to London in Business class.
+QUESTION 8:
+def analyze_text(user_input):
+    vowels = "aeiouAEIOU"
+    v_count = 0
+    c_count = 0
+
+    for ch in user_input:
+        if ch.isalpha():
+            if ch in vowels:
+                v_count += 1
+            else:
+                c_count += 1
+
+    return v_count, c_count
+
+v_cnt, c_cnt = analyze_text("Saumya")
+
+print("Vowels =", v_cnt)
+print("Consonants =", c_cnt)
+OUTPUT:
+Vowels = 3
+Consonants = 3
+QUESTION 9:
+def clean_ledger():
+    print("Ledger cleaned successfully.")
+
+status = clean_ledger()
+
+print(status)
+OUTPUT:
+Ledger cleaned successfully.
+None
+QUESTION 10:
+# Global variable
+API_KEY = "GLOBAL_X"
+
+def check_api():
+    # Local variable
+    API_KEY = "LOCAL_Y"
+    print("Inside function:", API_KEY)
+
+# Function call
+check_api()
+
+# Global variable remains unchanged
+print("Outside function:", API_KEY)
+OUTPUT:
+Inside function: LOCAL_Y
+Outside function: GLOBAL_X
+QUESTION 11:
+def validator(username):
+    letters = []
+
+    for ch in username:
+        if ch.isalpha():
+            letters.append(ch)
+
+    print("Alphabet Characters:", letters)
+    print("Count:", len(letters))
+
+validator("User909_AI")
+OUTPUT:
+Alphabet Characters: ['U', 's', 'e', 'r', 'A', 'I']
+Count: 6
+QUESTION 12:
+def setup(env="Prod", port):
+    print(env, port)
+    OUTPUT:
+    SyntaxError: non-default argument follows default argument
+    QUESTION 13:
+    def normalize_text(input_str):
+    return input_str.upper()
+
+result = normalize_text("cash_deposit_pk")
+print(result)
+OUTPUT:
+CASH_DEPOSIT_PK
+QUESTION 14:
+def calc_tax(bill):
+    tax = bill * 0.10
+    return tax
+
+def process_checkout(bill):
+    tax = calc_tax(bill)
+    total = bill + tax
+    print("Bill:", bill)
+    print("Tax:", tax)
+    print("Total:", total)
+
+process_checkout(1000)
+OUTPUT:
+Bill: 1000
+Tax: 100.0
+Total: 1100.0
+QUESTION 15:
+def execute_transaction():
+    transaction_id = 9081
+    print("Inside Function:", transaction_id)
+
+execute_transaction()
+
+# Trying to access local variable outside the function
+print(transaction_id)
+OUTPUT:
+Inside Function: 9081
+NameError: name 'transaction_id' is not defined
+
+
+
+apply_discount(5000, 10)
