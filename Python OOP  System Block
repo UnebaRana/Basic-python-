@@ -1,0 +1,161 @@
+QUESTION 1:
+class Product:
+    def __init__(self):
+        self.name = "Unknown"
+        self.price = 0
+
+# Object 1
+laptop = Product()
+laptop.name = "Laptop"
+laptop.price = 120000
+
+# Object 2
+smartphone = Product()
+smartphone.name = "Smartphone"
+smartphone.price = 50000
+
+print("Product 1:")
+print("Name:", laptop.name)
+print("Price:", laptop.price)
+
+print("\nProduct 2:")
+print("Name:", smartphone.name)
+print("Price:", smartphone.price)
+OUTPUT:
+Product 1:
+Name: Laptop
+Price: 120000
+
+Product 2:
+Name: Smartphone
+Price: 50000
+QUESTION 2:
+class User:
+    def __init__(self, username):
+        self.username = username
+        self.status = "Active"
+
+user1 = User("Ali")
+
+print("Username:", user1.username)
+print("Status:", user1.status)
+OUTPUT:
+Username: Ali
+Status: Active
+QUESTION 3:
+class SmartBulb:
+    def __init__(self):
+        self.state = "OFF"
+
+    def turn_on(self):
+        self.state = "ON"
+
+bulb = SmartBulb()
+
+print("Before:", bulb.state)
+
+bulb.turn_on()
+
+print("After:", bulb.state)
+OUTPUT:
+Before: OFF
+After: ON
+QUESTION 4:
+class Wallet:
+    def __init__(self):
+        self.balance = 0
+
+wallet = Wallet()
+
+print("Starting Balance:", wallet.balance)
+OUTPUT:
+Starting Balance: 0
+QUESTION 5:
+class Server:
+    provider_name = "AWS"      # Class Attribute
+
+    def __init__(self, ip_address):
+        self.ip_address = ip_address   # Instance Attribute
+
+server1 = Server("192.168.1.10")
+
+print("Provider:", Server.provider_name)
+print("IP Address:", server1.ip_address)
+OUTPUT:
+Provider: AWS
+IP Address: 192.168.1.10
+
+QUESTION 6:
+class Vehicle:
+    def run_diagnostic(self):
+        print("System check complete: 0 errors found.")
+
+car = Vehicle()
+
+car.run_diagnostic()
+OUTPUT:
+System check complete: 0 errors found.
+QUESTION 7:
+class DatabaseConfig:
+    credentials = ("localhost", 3306)
+
+db = DatabaseConfig()
+
+print("Host:", db.credentials[0])
+print("Port:", db.credentials[1])
+
+OUTPUT:
+Host: localhost
+Port: 3306
+
+QUESTION 8:
+class Song:
+    def __init__(self, title, artist):
+        self.title = title
+        self.artist = artist
+
+song1 = Song("Shape of You", "Ed Sheeran")
+
+print("Title:", song1.title)
+print("Artist:", song1.artist)
+OUTPUT:
+Title: Shape of You
+Artist: Ed Sheeran
+
+QUESTION 9:
+class HotelRoom:
+    def __init__(self):
+        self.is_occupied = True
+
+    def checkout(self):
+        self.is_occupied = False
+
+room = HotelRoom()
+
+print("Before Checkout:", room.is_occupied)
+
+room.checkout()
+
+print("After Checkout:", room.is_occupied)
+OUTPUT:
+Before Checkout: True
+After Checkout: False
+QUESTION 10 :
+class Profile:
+    def __init__(self):
+        self.status = "Active"
+
+    def restrict_access(self):
+        self.status = "Banned"
+
+user = Profile()
+
+print("Before:", user.status)
+
+user.restrict_access()
+
+print("After:", user.status)
+OUTPUT:
+Before: Active
+After: Banned
+
