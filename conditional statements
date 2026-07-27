@@ -1,0 +1,140 @@
+Question 2: SECTION A:
+# Automatic Grading Program
+
+marks = int(input("Enter your exam marks (0-100): "))
+
+if marks < 0 or marks > 100:
+    print("Invalid marks")
+elif marks >= 90:
+    print("Grade A")
+elif marks >= 80:
+    print("Grade B")
+else:
+    print("Grade C")
+
+  Question 3:
+# Portal Voting Eligibility
+
+age = int(input("Enter your age: "))
+
+if age < 0:
+    print("Invalid age")
+elif age >= 18:
+    print("You are eligible to vote")
+else:
+    print("You are not eligible to vote")
+
+  Question 4:
+# ATM Cash Withdrawal Limit
+
+balance = 15000
+
+amount = int(input("Enter withdrawal amount: "))
+
+if amount <= 0:
+    print("Invalid withdrawal amount")
+elif amount <= balance:
+    balance = balance - amount
+    print("Withdrawal Successful")
+    print("Updated Balance:", balance)
+else:
+    print("Insufficient Funds")
+  QUESTION 5:
+# E-Commerce Discount Voucher
+
+cart_value = float(input("Enter total cart value (PKR): "))
+
+if cart_value < 0:
+    print("Invalid cart value")
+elif cart_value > 5000:
+    discount = cart_value * 0.10
+    total_bill = cart_value - discount
+    print("10% Discount Applied")
+    print("Discount Amount:", discount)
+    print("Discounted Total:", total_bill)
+else:
+    print("No discount applicable")
+  SECTION B : 
+QUESTION 6:
+# Dynamic Shopping Cart
+
+cart = []
+
+cart.append("Eggs")
+cart.append("Milk")
+cart.append("Bread")
+
+print("Shopping Cart:", cart)
+print("Total Items:", len(cart))
+  QUESTION 7:
+# Hosting Provider Package Price List
+
+prices = [1200, 1500, 2000]
+
+# Update the second product price (index 1)
+prices[1] = 1800
+
+print("Updated Price List:", prices)
+  QUESTION 8:
+  # Online Multiplayer Game - Top 3 Scores
+
+scores = [980, 920, 890, 850, 810]
+
+# Get top 3 scores using slicing
+top_scores = scores[0:3]
+
+print("Top 3 Scores:", top_scores)
+  QUESTION 9:
+  # Database Query Latencies (in milliseconds)
+
+latencies = [120, 85, 150, 95, 60, 200]
+
+# Find minimum and maximum latency
+fastest_query = min(latencies)
+slowest_query = max(latencies)
+
+print("Fastest Query Execution Time:", fastest_query, "ms")
+print("Slowest Query Execution Time:", slowest_query, "ms")
+  question 10 ;
+# Critical Server Bug Patching (Insert)
+
+tasks = ["Check Backup", "Update OS", "Send Report"]
+
+# Insert a new task at the beginning
+tasks.insert(0, "Fix Critical Bug")
+
+print("Updated Task List:", tasks)
+  QUESTION 11:
+  # Banned User System Cleanup (Remove)
+
+members = ["ali_dev", "banned_user_10", "sara_ux", "zain_qa"]
+
+# Remove the banned user
+members.remove("banned_user_10")
+
+print("Updated Members List:", members)
+  SECTION C :
+QUESTION 13:
+# Immutable Connection Settings
+
+server_config = ("192.168.1.1", 8080)
+
+# Attempt to update the port number
+server_config[1] = 9090
+
+print(server_config)
+QUESTION 14:
+  # Single-Value Tuple
+
+deployment_mode = ("Production",)
+
+print("Deployment Mode:", deployment_mode)
+print("Data Type:", type(deployment_mode))
+QUESTION 15:
+  # System Log Auditor
+
+access_logs = (101, 105, 101, 102, 101, 108, 105)
+
+print("User ID 101 accessed:", access_logs.count(101), "times")
+print("User ID 102 first logged at index:", access_logs.index(102))
+  
