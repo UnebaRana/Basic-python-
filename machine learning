@@ -1,0 +1,208 @@
+LINEAR REGRESSION COMPLETE CODE
+ Step 1: Import Libraries
+import pandas as pd
+import numpy as np
+
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import (
+    mean_absolute_error,
+    mean_squared_error,
+    r2_score
+)
+
+ Step 2: Load Dataset
+
+
+df = pd.read_csv("train.csv")
+
+Display first 5 rows
+print("First 5 Rows:")
+print(df.head())
+
+ Dataset Information
+print("\nDataset Info:")
+print(df.info())
+
+
+ Step 3: Check Missing Values
+
+
+print("\nMissing Values:")
+print(df.isnull().sum())
+
+
+Step 4: Remove ID Column (if available)
+
+
+if 'Id' in df.columns:
+    df = df.drop('Id', axis=1)
+
+
+ Step 5: Fill Missing Values
+
+ Numeric columns
+numeric_columns = df.select_dtypes(include=np.number).columns
+df[numeric_columns] = df[numeric_columns].fillna(df[numeric_columns].mean())
+
+Categorical columns
+categorical_columns = df.select_dtypes(include='object').columns
+for col in categorical_columns:
+    df[col] = df[col].fillna(df[col].mode()[0])
+
+ Step 6: Convert Categorical Data
+
+
+df = pd.get_dummies(df)
+
+ Step 7: Select Target Variable
+
+
+target = "SalePrice"
+
+X = df.drop(target, axis=1)
+y = df[target]
+
+
+Step 8: Train-Test Split
+
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X,
+    y,
+    test_size=0.20,
+    random_state=42
+)
+
+
+Step 9: Train Linear Regression
+
+
+model = LinearRegression()
+
+model.fit(X_train, y_train)
+
+print("\nModel Trained Successfully!")
+
+
+Step 10: Prediction
+
+y_pred = model.predict(X_test)
+
+print("\nPredicted Values:")
+print(y_pred[:10])
+
+
+Step 11: Model Evaluation
+
+
+mae = mean_absolute_error(y_test, y_pred)
+mse = mean_squared_error(y_test, y_pred)
+rmse = np.sqrt(mse)
+r2 = r2_score(y_test, y_pred)
+
+print("\n========== Evaluation ==========")
+print("Mean Absolute Error :", mae)
+print("Mean Squared Error  :", mse)
+print("Root Mean Squared Error :", rmse)
+print("R2 Score :", r2)
+
+
+ Step 12: Compare Actual vs Predicted
+
+
+comparison = pd.DataFrame({
+    "Actual": y_test,
+    "Predicted": y_pred
+})
+
+print("\nActual vs Predicted")
+print(comparison.head(10))
+
+
+Step 13: Model Coefficients
+
+
+coefficients = pd.DataFrame({
+    "Feature": X.columns,
+    "Coefficient": model.coef_
+})
+
+print("\nModel Coefficients:")
+print(coefficients.head(20))
+
+
+ Step 14: Intercept
+
+
+print("\nIntercept:")
+print(model.intercept_)
+
+OUTPUT:
+target = "SalePrice"
+
+TEST.CSV 
+# Import Libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
+
+# Load Dataset
+data = pd.read_csv("test.csv")
+
+# Display first 5 rows
+print(data.head())
+
+# Select Features (X) and Target (y)
+# Change these column names according to your dataset
+X = data[['X']]      # Independent variable
+y = data['Y']        # Dependent variable
+
+# Split Dataset into Training and Testing
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Create Linear Regression Model
+model = LinearRegression()
+
+# Train Model
+model.fit(X_train, y_train)
+
+# Make Predictions
+y_pred = model.predict(X_test)
+
+# Print Results
+print("Coefficient:", model.coef_[0])
+print("Intercept:", model.intercept_)
+print("R² Score:", r2_score(y_test, y_pred))
+print("Mean Squared Error:", mean_squared_error(y_test, y_pred))
+
+# Plot Results
+plt.scatter(X_test, y_test, color='blue', label='Actual Data')
+plt.plot(X_test, y_pred, color='red', linewidth=2, label='Regression Line')
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.title("Linear Regression")
+plt.legend()
+plt.show()
+
+# Predict New Value
+new_value = [[10]]
+prediction = model.predict(new_value)
+print("Prediction for X=10:", prediction[0])
+
+output:
+PassengerId
+Pclass
+Name
+Sex
+Age
+SibSp
+Parch
+Ticket
+Fare
+Cabin
+Embarked
